@@ -1,0 +1,17 @@
+mode: scratch
+epochs: ${data.epochs}
+lr: ${model.lr}
+drop_path: ${model.drop_path}
+weight_decay: ${data.weight_decay}
+betas: [0.9, 0.999]
+warmup_epochs: 5
+eval_interval: 10
+label_smoothing: 0.1
+precision: bf16
+compiler: default
+selection_metric: macro_accuracy
+test_eval: false
+init_checkpoint: null
+init_weights: null
+head_seed: 2718
+head_std: 0.02

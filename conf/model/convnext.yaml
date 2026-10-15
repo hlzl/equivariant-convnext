@@ -1,0 +1,9 @@
+name: convnext
+lr: 0.0003
+drop_path: 0.4
+input_size: null
+module:
+  _target_: models.convnext.ConvNext
+  in_channels: ${data.in_channels}
+  num_classes: ${data.num_classes}
+  drop_path: ${train.drop_path}

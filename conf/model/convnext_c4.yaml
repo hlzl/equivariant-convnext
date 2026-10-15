@@ -1,0 +1,14 @@
+name: convnext_c4
+lr: 0.001
+drop_path: 0.4
+input_size: null
+module:
+  _target_: models.convnext_c4.ConvNextC4
+  in_channels: ${data.in_channels}
+  num_classes: ${data.num_classes}
+  depths: [3, 3, 27, 3]
+  widths: [96, 192, 384, 768]
+  stem_stride: 4
+  kernel_size: 7
+  readout: equivariant
+  drop_path: ${train.drop_path}

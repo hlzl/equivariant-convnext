@@ -1,0 +1,16 @@
+name: cifar100
+root: ${oc.env:DATA_ROOT,${oc.env:HOME}/Data}
+image_size: 32
+in_channels: 3
+num_classes: 100
+batch_size: 256
+workers: 8
+mean: [0.5071, 0.4867, 0.4408]
+std: [0.2675, 0.2565, 0.2761]
+rot_aug: none
+spatial_aug: true
+val_size: 5000
+epochs: 150
+weight_decay: 0.05
+# Crop at native resolution, then resize every split to 224 pixels.
+upscale_size: 224

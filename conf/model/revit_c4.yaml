@@ -1,0 +1,10 @@
+name: revit_c4
+lr: 0.001
+drop_path: 0.1
+input_size: 224
+module:
+  _target_: models.revit.ReViTC4
+  in_channels: ${data.in_channels}
+  num_classes: ${data.num_classes}
+  drop_path: ${train.drop_path}
+  readout: equivariant

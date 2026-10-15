@@ -1,0 +1,14 @@
+name: pcam
+root: ${oc.env:DATA_ROOT,${oc.env:HOME}/Data}
+image_size: 96
+in_channels: 3
+num_classes: 2
+batch_size: 512
+workers: 16
+mean: [0.700756, 0.538358, 0.691621]
+std: [0.234978, 0.277409, 0.212895]
+spatial_aug: true
+rot_aug: none
+epochs: 30
+weight_decay: 0.05
+upscale_size: ${model.input_size}

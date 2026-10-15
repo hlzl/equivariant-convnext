@@ -1,0 +1,12 @@
+defaults:
+  - scratch
+  - _self_
+
+mode: finetune
+epochs: 30
+warmup_epochs: 1
+eval_interval: 1
+drop_path: 0.0
+weight_decay: 0.05
+init_checkpoint: null
+init_weights: ema

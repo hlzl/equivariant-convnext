@@ -1,0 +1,7 @@
+defaults:
+  - convnext_c4
+  - _self_
+
+name: convnext_c4_inv
+module:
+  readout: invariant

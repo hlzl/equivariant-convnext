@@ -1,0 +1,19 @@
+defaults:
+  - model: convnext_c4
+  - data: cifar100
+  - train: scratch
+  - override hydra/job_logging: disabled
+  - override hydra/hydra_logging: disabled
+  - _self_
+
+seed: 0
+experiment: ${train.mode}
+device: cuda
+run_dir: checkpoints/${experiment}/${data.name}/${model.name}/${data.rot_aug}/seed_${seed}
+
+hydra:
+  run:
+    dir: .
+  output_subdir: null
+  job:
+    chdir: false
